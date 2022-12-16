@@ -1,0 +1,29 @@
+<!-- Include components -->
+<%- include('./partials/head.ejs') %>
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Account Login
+            </div>
+            <img src="/images/logo.png" class="rounded-circle mx-auto d-block m-4 logo">
+            <br>
+            <div class="card-body">
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary btn-block">
+                        sing In
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./partials/foot.ejs') %>

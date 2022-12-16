@@ -1,0 +1,18 @@
+{
+    "data":[
+      {
+        "username":"Garfield",
+        "password":"Lasagna"
+      },
+      {
+        "username":"Grumpy",
+        "password":"Cat"
+      },
+      {
+        "username":"Mister",
+        "password":"Bigglesworth"
+      }
+  
+    ]
+     
+}

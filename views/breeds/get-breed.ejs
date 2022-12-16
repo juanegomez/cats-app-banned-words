@@ -1,0 +1,39 @@
+<!-- Include components -->
+<%- include('./../partials/head.ejs') %>
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                view Breed
+            </div>
+            <img src="<%= breed.image %>" class="rounded-circle mx-auto d-block m-4 breedView">
+            <div class="card-body">
+                <div class="form-group">
+                    <h4>Breed:</h4>
+                    <p><%= breed.breed %></p>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h4>Country:</h4>
+                    <p><%= breed.country %></p>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h4>Origin:</h4>
+                    <p><%= breed.origin %></p>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h4>Coat:</h4>
+                    <p><%= breed.coat %></p>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h4>Pattern:</h4>
+                    <p><%= breed.pattern %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./../partials/foot.ejs') %>

@@ -1,0 +1,45 @@
+body{
+    background: #A8D1FF;
+}
+
+.breed {
+    width: 40%;
+    height: 100px;
+}
+
+.breedView {
+    width: 50%;
+    height: 150px;
+}
+
+.logo {
+    width: 20%;
+}
+
+#firstNameMessage P{
+    color: red;
+}
+
+#lastNameMessage p{
+    color: red;
+}
+
+#emailMessage p{
+    color: red;
+}
+
+#passwordMessage p{
+    color: red;
+}
+
+#confirmPasswordMessage p{
+    color: red;
+}
+
+#birthdateMessage p{
+    color: red;
+}
+
+#imageMessage p{
+    color: red;
+}

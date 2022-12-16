@@ -1,0 +1,30 @@
+<!-- Include components -->
+<%- include('./../partials/head.ejs') %>
+<div class="row">
+    <!-- If there are no facts in the database we want to display an alert instead of a grid -->
+    <% if (!facts || facts.length <= 0) { %>
+        <div class="alert alert-secondary" role="alert">
+            No facts exist!
+          </div>
+    <% } else { %>
+        <!-- Loop through the facts passed into the template and create the anchor tag and display the note image and data -->
+        <% facts.forEach(fact => { %>
+            <div class="col-md-3">
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                            <h4 class="card-title d-flex justify-content-between align-items-center">
+                                Fact
+                            </h4>
+                        <hr>
+                        Fact: <a href="fact/<%= fact.id %>">
+                           <p><%= fact.fact %></p>
+                        </a>
+                        <p>Length: <%= fact.length %></p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    <% } %> 
+</div>
+<%- include('./../partials/foot.ejs') %>

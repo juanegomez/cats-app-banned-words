@@ -1,0 +1,31 @@
+<!-- Include components -->
+<%- include('./../partials/head.ejs') %>
+<div class="row">
+    <!-- If there are no breeds in the database we want to display an alert instead of a grid -->
+    <% if (!breeds || breeds.length <= 0) { %>
+        <div class="alert alert-secondary" role="alert">
+            No breeds exist!
+          </div>
+    <% } else { %>
+        <!-- Loop through the breeds passed into the template and create the anchor tag and display the note image and data -->
+        <% breeds.forEach(breed => { %>
+            <div class="col-md-3">
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="breed/<%= breed.id %>">
+                            <h4 class="card-title d-flex justify-content-between align-items-center">
+                                <%= breed.breed %>
+                            </h4>
+                        </a>
+                        <hr>
+                        <a href="breed/<%= breed.id %>">
+                            <img src="<%= breed.image %>" class="rounded-circle mx-auto d-block m-4 breed">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    <% } %> 
+</div>
+<%- include('./../partials/foot.ejs') %>
